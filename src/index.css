@@ -24,12 +24,8 @@
 
   --font-overpass: 'Overpass', sans-serif;
 
-  /* Space 3xs: 4px → 5px */
-  --spacing-3xs: clamp(0.25rem, 0.2321rem + 0.0893vw, 0.3125rem);
-  /* Space 2xs: 8px → 10px */
-  --spacing-2xs: clamp(0.5rem, 0.4643rem + 0.1786vw, 0.625rem);
-  /* Space xs: 12px → 15px */
-  --spacing-xs: clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem);
+  /* Space xs: 8px → 10px */
+  --spacing-xs: clamp(0.5rem, 0.4643rem + 0.1786vw, 0.625rem);
   /* Space s: 16px → 20px */
   --spacing-s: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
   /* Space m: 24px → 30px */
@@ -38,20 +34,18 @@
   --spacing-l: clamp(2rem, 1.8571rem + 0.7143vw, 2.5rem);
   /* Space xl: 40px → 50px */
   --spacing-xl: clamp(2.5rem, 2.3214rem + 0.8929vw, 3.125rem);
-  /* Space 2xl: 48px → 60px */
-  --spacing-2xl: clamp(3rem, 2.7857rem + 1.0714vw, 3.75rem);
-  /* Space 3xl: 56px → 70px */
-  --spacing-3xl: clamp(3.5rem, 3.25rem + 1.25vw, 4.375rem);
-  /* Space 4xl: 64px → 80px */
-  --spacing-4xl: clamp(4rem, 3.7143rem + 1.4286vw, 5rem);
+  /* Space 2xl: 104px → 130px */
+  --spacing-2xl: clamp(6.5rem, 6.0357rem + 2.3214vw, 8.125rem);
+  /* Space 3xl: 136px → 170px */
+  --spacing-3xl: clamp(8.5rem, 7.8929rem + 3.0357vw, 10.625rem);
 
-  --spacing-100: var(--spacing-2xs); /* 8px -> 10px */
-  --spacing-200: var(--spacing-s); /* 16px -> 20px */
-  --spacing-300: var(--spacing-m); /* 24px -> 30px */
-  --spacing-400: var(--spacing-l); /* 32px -> 40px */
-  --spacing-500: var(--spacing-xl); /* 40px -> 50px */
-  --spacing-600: var(--spacing-2xl); /* 48px -> 60px */
-  --spacing-700: var(--spacing-3xl); /* 56px -> 70px */
+  --spacing-100: var(--spacing-xs);
+  --spacing-200: var(--spacing-s);
+  --spacing-300: var(--spacing-m);
+  --spacing-400: var(--spacing-l);
+  --spacing-500: var(--spacing-xl);
+  --spacing-1300: var(--spacing-2xl);
+  --spacing-1700: var(--spacing-3xl);
 
   /* Step -3: 9.2593px → 10.24px */
   --text--3: clamp(0.5787rem, 0.5612rem + 0.0876vw, 0.64rem);
