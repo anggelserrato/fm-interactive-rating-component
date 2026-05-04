@@ -1,1 +1,137 @@
 @import 'tailwindcss';
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('./fonts/Overpass.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --color-orange-500: hsl(25, 97%, 53%);
+  --color-white: hsl(0, 100%, 100%);
+  --color-grey-500: hsl(217, 12%, 63%);
+  --color-grey-900: hsl(213, 19%, 18%);
+  --color-grey-950: hsl(216, 12%, 8%);
+  --color-primary: hsl(215, 20%, 17%);
+  --color-secondary: hsl(216, 24%, 12%);
+
+  --gradient-primary: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  --font-overpass: 'Overpass', sans-serif;
+
+  /* Space 3xs: 4px → 5px */
+  --spacing-3xs: clamp(0.25rem, 0.2321rem + 0.0893vw, 0.3125rem);
+  /* Space 2xs: 8px → 10px */
+  --spacing-2xs: clamp(0.5rem, 0.4643rem + 0.1786vw, 0.625rem);
+  /* Space xs: 12px → 15px */
+  --spacing-xs: clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem);
+  /* Space s: 16px → 20px */
+  --spacing-s: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+  /* Space m: 24px → 30px */
+  --spacing-m: clamp(1.5rem, 1.3929rem + 0.5357vw, 1.875rem);
+  /* Space l: 32px → 40px */
+  --spacing-l: clamp(2rem, 1.8571rem + 0.7143vw, 2.5rem);
+  /* Space xl: 40px → 50px */
+  --spacing-xl: clamp(2.5rem, 2.3214rem + 0.8929vw, 3.125rem);
+  /* Space 2xl: 48px → 60px */
+  --spacing-2xl: clamp(3rem, 2.7857rem + 1.0714vw, 3.75rem);
+  /* Space 3xl: 56px → 70px */
+  --spacing-3xl: clamp(3.5rem, 3.25rem + 1.25vw, 4.375rem);
+  /* Space 4xl: 64px → 80px */
+  --spacing-4xl: clamp(4rem, 3.7143rem + 1.4286vw, 5rem);
+
+  --spacing-100: var(--spacing-2xs); /* 8px -> 10px */
+  --spacing-200: var(--spacing-s); /* 16px -> 20px */
+  --spacing-300: var(--spacing-m); /* 24px -> 30px */
+  --spacing-400: var(--spacing-l); /* 32px -> 40px */
+  --spacing-500: var(--spacing-xl); /* 40px -> 50px */
+  --spacing-600: var(--spacing-2xl); /* 48px -> 60px */
+  --spacing-700: var(--spacing-3xl); /* 56px -> 70px */
+
+  /* Step -3: 9.2593px → 10.24px */
+  --text--3: clamp(0.5787rem, 0.5612rem + 0.0876vw, 0.64rem);
+  /* Step -2: 11.1111px → 12.8px */
+  --text--2: clamp(0.6944rem, 0.6643rem + 0.1508vw, 0.8rem);
+  /* Step -1: 13.3333px → 16px */
+  --text--1: clamp(0.8333rem, 0.7857rem + 0.2381vw, 1rem);
+  /* Step 0: 16px → 20px */
+  --text-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+  /* Step 1: 19.2px → 25px */
+  --text-1: clamp(1.2rem, 1.0964rem + 0.5179vw, 1.5625rem);
+  /* Step 2: 23.04px → 31.25px */
+  --text-2: clamp(1.44rem, 1.2934rem + 0.733vw, 1.9531rem);
+  /* Step 3: 27.648px → 39.0625px */
+  --text-3: clamp(1.728rem, 1.5242rem + 1.0192vw, 2.4414rem);
+  /* Step 4: 33.1776px → 48.8281px */
+  --text-4: clamp(2.0736rem, 1.7941rem + 1.3974vw, 3.0518rem);
+  /* Step 5: 39.8131px → 61.0352px */
+  --text-5: clamp(2.4883rem, 2.1094rem + 1.8948vw, 3.8147rem);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-orange-500);
+    font-family: var(--font-overpass);
+  }
+}
+
+@utility text-preset-1 {
+  font-weight: 700;
+  font-size: var(--text-3);
+  line-height: 1.1; /* 35px / 31.25px = 1.12 */
+  letter-spacing: 0;
+}
+
+@utility text-preset-2 {
+  font-weight: 700;
+  font-size: var(--text-2);
+  line-height: 1.3; /* 30px / 23.04px = 1.30 */
+  letter-spacing: 0;
+}
+
+@utility text-preset-3 {
+  font-weight: 700;
+  font-size: var(--text-0);
+  line-height: 1.5; /* 24px / 16px = 1.5 */
+  letter-spacing: 0.0125em; /* 0.2px / 16px = 0.0125em */
+}
+
+@utility text-preset-4-bold {
+  font-weight: 700;
+  font-size: var(--text--1);
+  line-height: 1.4; /* 19px / 13.33px = 1.42 */
+  letter-spacing: 0.125em; /* 2px / 16px = 0.125em */
+}
+
+@utility text-preset-4-regular {
+  font-weight: 400;
+  font-size: var(--text--1);
+  line-height: 1.5; /* 24px / 16px = 1.5 */
+  letter-spacing: 0;
+}
+
+@utility text-preset-5-bold {
+  font-weight: 700;
+  font-size: var(--text--1);
+  line-height: 1.3; /* 18px / 13.33px = 1.35 */
+  letter-spacing: 0.14em; /* 1.87px / 13.33px = 0.14em */
+}
+
+@utility text-preset-5-semibold {
+  font-weight: 600;
+  font-size: var(--text--1);
+  line-height: 1.5; /* 24px / 16px = 1.5 */
+  letter-spacing: 0.01em; /* 0.17px / 16px = 0.0106em */
+}
+
+@utility text-preset-5-regular {
+  font-weight: 400;
+  font-size: var(--text--1);
+  line-height: 1.4; /* 22px / 16px = 1.37 */
+  letter-spacing: 0;
+}
