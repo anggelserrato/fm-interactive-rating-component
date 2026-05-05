@@ -30,6 +30,8 @@ Users should be able to:
 
 ### Screenshot
 
+<img width="1920" height="1440" alt="interactive-rating-component-shots" src="https://github.com/user-attachments/assets/df82be3e-0542-47c2-a99d-b79640ce6c0b" />
+
 ### Links
 
 - Solution URL: [View Code](https://github.com/anggelserrato/fm-interactive-rating-component)
