@@ -1,10 +1,19 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Overpass';
-  src: url('./fonts/Overpass.ttf') format('truetype');
-  font-weight: 100 900;
   font-display: swap;
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/overpass-v19-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/overpass-v19-latin-700.woff2') format('woff2');
 }
 
 @theme {
@@ -22,7 +31,9 @@
     var(--color-secondary)
   );
 
-  --font-overpass: 'Overpass', sans-serif;
+  --font-sans:
+    'Overpass', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
   /* Space xs: 8px → 10px */
   --spacing-xs: clamp(0.5rem, 0.4643rem + 0.1786vw, 0.625rem);
@@ -68,9 +79,12 @@
 }
 
 @layer base {
+  html {
+    @apply antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   body {
     background-color: var(--color-grey-950);
-    font-family: var(--font-overpass);
   }
 }
 

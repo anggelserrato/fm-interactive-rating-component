@@ -50,8 +50,9 @@ Users should be able to:
 
 - [Shots.so](https://shots.so/) - A fantastic tool for creating beautiful and professional screenshots of your websites.
 - [Squoosh.app](https://squoosh.app/) - An amazing image optimizer that helps you compress images without losing quality, making your site load faster.
+- [Google Webfonts Helper](https://gwfh.mranftl.com/fonts) - An excellent resource that allowed me to easily download and self-host Google Fonts, significantly improving the site's loading speed and privacy by avoiding external CDN requests.
 
 ## Author
 
-- Website - [serrato.me](https://www.serrato.me)
+- Website - [serrato.dev](https://www.serrato.dev)
 - Frontend Mentor - [@anggelserrato](https://www.frontendmentor.io/profile/anggelserrato)
